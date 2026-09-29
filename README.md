@@ -15,7 +15,7 @@ Delta Panel gives your staff one place to run the server: who is online, every c
 
 > This repository is documentation only. The resource is sold on our store and downloaded from the Client Area after you redeem your code.
 
-[Website](https://d7team.com/products/delta-panel) · [Installation guide](https://d7team.com/guides/delta-panel) · [Live demo](https://d7team.com/demo-panel) · [Store](https://store.d7team.com) · [Discord](https://discord.gg/d-7)
+[Website](https://d7team.com/products/delta-panel) · [Installation guide](https://d7team.com/guides/delta-panel) · [Live demo](https://d7team.com/demo-panel) · [Store](https://store.d7team.com/delta-panel-30-days/p157845357) · [Discord](https://discord.gg/d-7)
 
 ### At a glance
 
@@ -193,7 +193,7 @@ Configuration, first start, updates and every console message explained: [Instal
 
 - **$7.99 / month** — Delta Panel Premium
 
-[Store](https://store.d7team.com)
+[Store](https://store.d7team.com/delta-panel-30-days/p157845357)
 
 ### FAQ
 
@@ -270,7 +270,7 @@ Delta Panel تجمع لطاقمك كل شي بمكان واحد: مين متصل
 
 > هذا المستودع للتعريف والشرح فقط. الريسورس يُباع في متجرنا، وتحمّله من منطقة العميل بعد ما تفعّل الكود
 
-[الموقع](https://d7team.com/ar/products/delta-panel) · [شرح التثبيت](https://d7team.com/ar/guides/delta-panel) · [تجربة مباشرة](https://d7team.com/ar/demo-panel) · [المتجر](https://store.d7team.com) · [الدسكورد](https://discord.gg/d-7)
+[الموقع](https://d7team.com/ar/products/delta-panel) · [شرح التثبيت](https://d7team.com/ar/guides/delta-panel) · [تجربة مباشرة](https://d7team.com/ar/demo-panel) · [المتجر](https://store.d7team.com/delta-panel-30-days/p157845357) · [الدسكورد](https://discord.gg/d-7)
 
 ### نظرة سريعة
 
@@ -452,7 +452,7 @@ ensure DeltaPanel
 
 - **⁦$7.99⁩ بالشهر** — لوحة دلتا بريميوم
 
-[المتجر](https://store.d7team.com)
+[المتجر](https://store.d7team.com/delta-panel-30-days/p157845357)
 
 ### الأسئلة الشائعة
 
