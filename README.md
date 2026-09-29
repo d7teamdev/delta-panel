@@ -25,7 +25,7 @@ Delta Panel gives your staff one place to run the server: who is online, every c
 | **Inventories** | ox_inventory, qb-inventory, qs-inventory, ps-inventory and lj-inventory |
 | **Where it runs** | In the browser, and in the game with /delta |
 | **Players** | Online and offline |
-| **Sign-in** | Discord — no passwords to hand out |
+| **Sign-in** | Discord OAuth2 |
 | **Languages** | Arabic and English |
 
 ### Features
@@ -280,7 +280,7 @@ Delta Panel تجمع لطاقمك كل شي بمكان واحد: مين متصل
 | **الإنفنتري** | ox_inventory و qb-inventory و qs-inventory و ps-inventory و lj-inventory |
 | **وين تشتغل** | بالمتصفح، وداخل اللعبة بأمر ⁦/delta⁩ |
 | **الاعبين** | المتصلين وغير المتصلين |
-| **تسجيل الدخول** | دسكورد — بدون باسووردات توزعها |
+| **تسجيل الدخول** | Discord OAuth2 |
 | **اللغات** | العربي والإنجليزي |
 
 ### المميزات
