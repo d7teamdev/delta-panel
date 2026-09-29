@@ -1,9 +1,9 @@
 <p align="center"><img src="https://d7team.com/icon-512.png" width="88" alt="Delta Seven"></p>
 <h1 align="center">Delta Panel</h1>
 <p align="center"><b>FiveM Admin Panel for QBCore, QBox & CFW Servers</b></p>
-<p align="center"><a href="#english">English</a> · <a href="#arabic">العربية</a></p>
+<p align="center"><a href="#english">English</a> · <a href="#arabic">العربية</a> · <a href="#screenshots">Screenshots · الصور</a></p>
 
-<p align="center"><a href="https://d7team.com/products/delta-panel"><img src="https://d7team.com/product-previews/delta-panel.webp" alt="Delta Panel" width="860"></a></p>
+<p align="center"><a href="https://d7team.com/products/delta-panel"><img src="images/in-game-dashboard.webp" alt="Delta Panel" width="860"></a></p>
 
 <a id="english"></a>
 
@@ -43,6 +43,8 @@ Delta Panel gives your staff one place to run the server: who is online, every c
 - Delete a character, with a typed confirmation.
 - Set a connected player's permission level: user, mod, admin or god.
 
+<img src="images/character-profile.webp" alt="Character profile" width="720">
+
 #### Quick actions on connected players
 
 - Revive, feed and give armour.
@@ -53,6 +55,8 @@ Delta Panel gives your staff one place to run the server: who is online, every c
 - Direct message a player, or send an announcement to the whole server.
 - Every action reports back only once the change has really happened on the server.
 
+<img src="images/quick-actions.webp" alt="Quick actions and inventory" width="720">
+
 #### Inventories and stashes
 
 - Read any player's inventory with item images and labels.
@@ -61,6 +65,8 @@ Delta Panel gives your staff one place to run the server: who is online, every c
 - Browse every stash on the server, search its items, add, remove or clear.
 - Open a vehicle's trunk and glovebox from its page.
 
+<img src="images/stashes.webp" alt="Stashes" width="720">
+
 #### Vehicles
 
 - Search every vehicle on the server by plate, model, owner or state.
@@ -68,12 +74,16 @@ Delta Panel gives your staff one place to run the server: who is online, every c
 - Change a vehicle's stored state, or delete it.
 - Repair the vehicle a connected player is sitting in.
 
+<img src="images/vehicles.webp" alt="Vehicles" width="720">
+
 #### Live Screens
 
 - Watch a connected player's game view live in your browser.
 - Several players side by side, and one expanded to full size.
 - It streams only while somebody is watching and stops on its own when you leave.
 - No audio, no recording, nothing stored.
+
+<img src="images/live-screens.webp" alt="Live Screens" width="720">
 
 #### Moderation and protection
 
@@ -84,6 +94,8 @@ Delta Panel gives your staff one place to run the server: who is online, every c
 - Dupe Scanner: finds duplicated weapons across inventories and stashes and removes them.
 - Investigator: one search across characters, vehicles, stashes and logs.
 
+<img src="images/protection.webp" alt="Protection" width="720">
+
 #### Server overview
 
 - Dashboard: who is online now, activity over the day and the last players to join.
@@ -91,6 +103,8 @@ Delta Panel gives your staff one place to run the server: who is online, every c
 - Priority and queue: grant or remove priority, move a player in the queue, or remove them.
 - Gangs and their members.
 - Leaderboards your players can open in their browser, with weekly and all-time boards.
+
+<img src="images/dashboard.webp" alt="Dashboard" width="720">
 
 #### Staff, permissions and logs
 
@@ -100,6 +114,8 @@ Delta Panel gives your staff one place to run the server: who is online, every c
 - Several servers under one account, each with its own admins and settings.
 - FiveM Config page: appearance resource, the in-game command, and your own cuff, uncuff, revive and clothing events.
 - In-game menu on /delta with the same pages and the same permissions.
+
+<img src="images/admins-roles.webp" alt="Admins & Roles" width="720">
 
 ### Online and offline players
 
@@ -282,6 +298,8 @@ Delta Panel تجمع لطاقمك كل شي بمكان واحد: مين متصل
 - حذف شخصية، مع تأكيد مكتوب
 - تحديد صلاحية الاعب المتصل: user أو mod أو admin أو god
 
+<img src="images/character-profile.webp" alt="Character profile" width="720">
+
 #### إجراءات سريعة على الاعبين المتصلين
 
 - إنعاش، إطعام، وإعطاء درع
@@ -292,6 +310,8 @@ Delta Panel تجمع لطاقمك كل شي بمكان واحد: مين متصل
 - رسالة خاصة للاعب، أو إعلان لكل السيرفر
 - كل إجراء يرجّع لك النتيجة بعد ما يتأكد إن التغيير صار فعلاً بالسيرفر
 
+<img src="images/quick-actions.webp" alt="Quick actions and inventory" width="720">
+
 #### الإنفنتري والمخازن
 
 - تشوف إنفنتري أي لاعب مع صور الأغراض وأسمائها
@@ -300,6 +320,8 @@ Delta Panel تجمع لطاقمك كل شي بمكان واحد: مين متصل
 - تصفح كل مخازن السيرفر، ابحث بأغراضها، أضف أو اسحب أو نظّف
 - فتح شنطة المركبة والدرج من صفحتها
 
+<img src="images/stashes.webp" alt="Stashes" width="720">
+
 #### المركبات
 
 - ابحث في كل مركبات السيرفر باللوحة أو الموديل أو المالك أو الحالة
@@ -307,12 +329,16 @@ Delta Panel تجمع لطاقمك كل شي بمكان واحد: مين متصل
 - تغيير حالة تخزين المركبة، أو حذفها
 - تصليح المركبة الي راكبها الاعب المتصل
 
+<img src="images/vehicles.webp" alt="Vehicles" width="720">
+
 #### الشاشات المباشرة
 
 - شاهد شاشة الاعب المتصل مباشرة من متصفحك
 - أكثر من لاعب جنب بعض، وتقدر تكبّر واحد بالحجم الكامل
 - البث يشتغل بس وأنت تتابع، ويوقف لحاله أول ما تطلع
 - بدون صوت، بدون تسجيل، وما ينحفظ شي
+
+<img src="images/live-screens.webp" alt="Live Screens" width="720">
 
 #### الإدارة والحماية
 
@@ -323,6 +349,8 @@ Delta Panel تجمع لطاقمك كل شي بمكان واحد: مين متصل
 - فحص التدبيل: يلقى الأسلحة المكررة في الإنفنتري والمخازن ويحذفها
 - البحث المتقدم: بحث واحد يغطي الشخصيات والمركبات والمخازن واللوقات
 
+<img src="images/protection.webp" alt="Protection" width="720">
+
 #### نظرة على السيرفر
 
 - لوحة المعلومات: مين متصل الحين، نشاط السيرفر خلال اليوم، وآخر الي دخلوا
@@ -330,6 +358,8 @@ Delta Panel تجمع لطاقمك كل شي بمكان واحد: مين متصل
 - الأولوية والانتظار: إعطاء أو سحب أولوية، تحريك لاعب بالطابور، أو إخراجه منه
 - العصابات وأعضاؤها
 - صفحات صدارة يفتحها لاعبينك من المتصفح، أسبوعية وعلى طول الوقت
+
+<img src="images/dashboard.webp" alt="Dashboard" width="720">
 
 #### الطاقم والصلاحيات واللوقات
 
@@ -339,6 +369,8 @@ Delta Panel تجمع لطاقمك كل شي بمكان واحد: مين متصل
 - أكثر من سيرفر تحت حساب واحد، وكل سيرفر له إدارييه وإعداداته
 - صفحة FiveM Config: ريسورس الملابس، أمر اللعبة، وأحداث التكبيل وفكه والإنعاش والملابس الخاصة بسيرفرك
 - منيو داخل اللعبة على ⁦/delta⁩ بنفس الصفحات ونفس الصلاحيات
+
+<img src="images/admins-roles.webp" alt="Admins & Roles" width="720">
 
 ### الاعبين المتصلين وغير المتصلين
 
@@ -484,6 +516,25 @@ ensure DeltaPanel
 - [سيارات فايف ام مضافة](https://d7team.com/ar/cars)
 
 </div>
+
+---
+
+<a id="screenshots"></a>
+
+## Screenshots · الصور
+
+<table>
+<tr><td width="50%" valign="top"><a href="images/in-game-dashboard.webp"><img src="images/in-game-dashboard.webp" alt="In game, on /delta"></a><br><b>In game, on /delta</b> · داخل اللعبة، بأمر ⁦/delta⁩</td><td width="50%" valign="top"><a href="images/dashboard.webp"><img src="images/dashboard.webp" alt="Dashboard"></a><br><b>Dashboard</b> · لوحة التحكم</td></tr>
+<tr><td width="50%" valign="top"><a href="images/online-players.webp"><img src="images/online-players.webp" alt="Online Players"></a><br><b>Online Players</b> · الاعبين المتصلين</td><td width="50%" valign="top"><a href="images/live-screens.webp"><img src="images/live-screens.webp" alt="Live Screens"></a><br><b>Live Screens</b> · الشاشات المباشرة</td></tr>
+<tr><td width="50%" valign="top"><a href="images/characters.webp"><img src="images/characters.webp" alt="Characters"></a><br><b>Characters</b> · الشخصيات</td><td width="50%" valign="top"><a href="images/character-profile.webp"><img src="images/character-profile.webp" alt="Character profile"></a><br><b>Character profile</b> · ملف الشخصية</td></tr>
+<tr><td width="50%" valign="top"><a href="images/quick-actions.webp"><img src="images/quick-actions.webp" alt="Quick actions and inventory"></a><br><b>Quick actions and inventory</b> · الإجراءات السريعة والإنفنتري</td><td width="50%" valign="top"><a href="images/vehicles.webp"><img src="images/vehicles.webp" alt="Vehicles"></a><br><b>Vehicles</b> · المركبات</td></tr>
+<tr><td width="50%" valign="top"><a href="images/gangs.webp"><img src="images/gangs.webp" alt="Gangs"></a><br><b>Gangs</b> · العصابات</td><td width="50%" valign="top"><a href="images/stashes.webp"><img src="images/stashes.webp" alt="Stashes"></a><br><b>Stashes</b> · المخازن</td></tr>
+<tr><td width="50%" valign="top"><a href="images/priority-queue.webp"><img src="images/priority-queue.webp" alt="Priority & Queue"></a><br><b>Priority & Queue</b> · الأولوية والانتظار</td><td width="50%" valign="top"><a href="images/investigator.webp"><img src="images/investigator.webp" alt="Investigator"></a><br><b>Investigator</b> · البحث المتقدم</td></tr>
+<tr><td width="50%" valign="top"><a href="images/leaderboards.webp"><img src="images/leaderboards.webp" alt="Leaderboards"></a><br><b>Leaderboards</b> · صفحات الصدارة</td><td width="50%" valign="top"><a href="images/public-leaderboard.webp"><img src="images/public-leaderboard.webp" alt="Public leaderboard"></a><br><b>Public leaderboard</b> · صفحة الصدارة العامة</td></tr>
+<tr><td width="50%" valign="top"><a href="images/bans.webp"><img src="images/bans.webp" alt="Bans"></a><br><b>Bans</b> · الحظر</td><td width="50%" valign="top"><a href="images/protection.webp"><img src="images/protection.webp" alt="Protection"></a><br><b>Protection</b> · الحماية</td></tr>
+<tr><td width="50%" valign="top"><a href="images/dupe-scanner.webp"><img src="images/dupe-scanner.webp" alt="Dupe Scanner"></a><br><b>Dupe Scanner</b> · فحص التدبيل</td><td width="50%" valign="top"><a href="images/audit-logs.webp"><img src="images/audit-logs.webp" alt="Audit Logs"></a><br><b>Audit Logs</b> · سجل اللوقات</td></tr>
+<tr><td width="50%" valign="top"><a href="images/admins-roles.webp"><img src="images/admins-roles.webp" alt="Admins & Roles"></a><br><b>Admins & Roles</b> · الإداريين والرتب</td></tr>
+</table>
 
 ---
 
