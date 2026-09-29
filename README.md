@@ -191,7 +191,8 @@ Configuration, first start, updates and every console message explained: [Instal
 
 ### Pricing
 
-- **$7.99 / month** — Delta Panel Premium
+- **$7.99 / month** — [Delta Panel Premium](https://store.d7team.com/delta-panel-30-days/p157845357)
+- **$23.99 / 3 months** — [Delta Panel Premium, 3 months](https://store.d7team.com/delta-panel-90-days/p1519399239)
 
 [Store](https://store.d7team.com/delta-panel-30-days/p157845357)
 
@@ -242,7 +243,7 @@ One. A licence is tied to one server IP. One account can manage several servers,
 <details>
 <summary><b>How much does it cost?</b></summary>
 
-Premium is $7.99 a month. Buy it on our store and redeem the code on panel.d7team.com.
+Premium is $7.99 a month, or $23.99 for 3 months. Buy it on our store and redeem the code on panel.d7team.com.
 
 </details>
 
@@ -450,7 +451,8 @@ ensure DeltaPanel
 
 ### الأسعار
 
-- **⁦$7.99⁩ بالشهر** — لوحة دلتا بريميوم
+- **⁦$7.99⁩ بالشهر** — [لوحة دلتا بريميوم](https://store.d7team.com/delta-panel-30-days/p157845357)
+- **⁦$23.99⁩ كل 3 أشهر** — [لوحة دلتا بريميوم لمدة 3 أشهر](https://store.d7team.com/delta-panel-90-days/p1519399239)
 
 [المتجر](https://store.d7team.com/delta-panel-30-days/p157845357)
 
@@ -501,7 +503,7 @@ ensure DeltaPanel
 <details>
 <summary><b>كم سعرها؟</b></summary>
 
-باقة بريميوم بـ ⁦$7.99⁩ بالشهر. تشتريها من متجرنا وتفعّل الكود في panel.d7team.com
+باقة بريميوم بـ ⁦$7.99⁩ بالشهر، أو ⁦$23.99⁩ لمدة 3 أشهر. تشتريها من متجرنا وتفعّل الكود في panel.d7team.com
 
 </details>
 
