@@ -192,7 +192,7 @@ Configuration, first start, updates and every console message explained: [Instal
 ### Pricing
 
 - **$7.99 / month** — [Delta Panel Premium](https://store.d7team.com/delta-panel-30-days/p157845357)
-- **$23.99 / 3 months** — [Delta Panel Premium, 3 months](https://store.d7team.com/delta-panel-90-days/p1519399239)
+- **$19.99 / 3 months** — [Delta Panel Premium, 3 months](https://store.d7team.com/delta-panel-90-days/p1519399239)
 
 [Store](https://store.d7team.com/delta-panel-30-days/p157845357)
 
@@ -243,7 +243,7 @@ One. A licence is tied to one server IP. One account can manage several servers,
 <details>
 <summary><b>How much does it cost?</b></summary>
 
-Premium is $7.99 a month, or $23.99 for 3 months. Buy it on our store and redeem the code on panel.d7team.com.
+Premium is $7.99 a month, or $19.99 for 3 months — cheaper than paying monthly. Buy it on our store and redeem the code on panel.d7team.com.
 
 </details>
 
@@ -263,11 +263,11 @@ Support is on our Discord: [discord.gg/d-7](https://discord.gg/d-7). Issues are 
 
 <div dir="rtl">
 
-## لوحة تحكم دلتا — لوحة تحكم سيرفرات فايف ام لـ QBCore و QBox و CFW
+## لوحة تحكم دلتا — لوحة تحكم سيرفرات فايف ام لـ QBCore و QBox
 
 لوحة تحكم سيرفر فايف ام لـ QBCore و QBox و CFW: تحكم بالاعبين المتصلين وغير المتصلين، الإنفنتري، المركبات، الحظر والشاشات المباشرة من المتصفح أو داخل اللعبة.
 
-Delta Panel تجمع لطاقمك كل شي بمكان واحد: مين متصل، كل الشخصيات والمركبات، الإنفنتري والمخازن، البانات، قائمة الأولوية، وسجل كامل لمين سوّى وش. يقدرون يشوفون شاشة اللاعب لحظة بلحظة وياخذون إجراء على الي شافوه. تفتح بالمتصفح، ومن تحديث 2.1 تفتح جوّه اللعبة بعد — الإداري يكتب ⁦/delta⁩ وتجيه نفس الصفحات بنفس الصلاحيات، بدون ما يطلع من السيرفر.
+لوحة دلتا تجمع لطاقمك كل شي بمكان واحد: مين متصل، كل الشخصيات والمركبات، الإنفنتري والمخازن، البانات، قائمة الأولوية، وسجل كامل لمين سوّى وش. يقدرون يشوفون شاشة اللاعب لحظة بلحظة وياخذون إجراء على الي شافوه. تفتح بالمتصفح، ومن تحديث 2.1 تفتح جوّه اللعبة بعد — الإداري يكتب ⁦/delta⁩ وتجيه نفس الصفحات بنفس الصلاحيات، بدون ما يطلع من السيرفر.
 
 > هذا المستودع للتعريف والشرح فقط. الريسورس يُباع في متجرنا، وتحمّله من منطقة العميل بعد ما تفعّل الكود
 
@@ -429,7 +429,7 @@ Delta Panel تجمع لطاقمك كل شي بمكان واحد: مين متصل
 
 1. اشترِ لوحة دلتا من متجرنا.
 2. سجّل دخولك في panel.d7team.com عن طريق دسكورد.
-3. منطقة العميل ← تفعيل كود: اكتب الكود وآيبي سيرفرك العام.
+3. منطقة العميل ← تفعيل كود: اكتب الكود وآيبي سيرفرك.
 4. حمّل DeltaPanel من منطقة العميل.
 5. حط مجلد DeltaPanel في resources. لا تغيّر اسمه.
 6. في server.cfg، شغّله بعد قاعدة البيانات والفريم وورك والإنفنتري:
@@ -452,7 +452,7 @@ ensure DeltaPanel
 ### الأسعار
 
 - **⁦$7.99⁩ بالشهر** — [لوحة دلتا بريميوم](https://store.d7team.com/delta-panel-30-days/p157845357)
-- **⁦$23.99⁩ كل 3 أشهر** — [لوحة دلتا بريميوم لمدة 3 أشهر](https://store.d7team.com/delta-panel-90-days/p1519399239)
+- **⁦$19.99⁩ كل 3 أشهر** — [لوحة دلتا بريميوم لمدة 3 أشهر](https://store.d7team.com/delta-panel-90-days/p1519399239)
 
 [المتجر](https://store.d7team.com/delta-panel-30-days/p157845357)
 
@@ -503,7 +503,7 @@ ensure DeltaPanel
 <details>
 <summary><b>كم سعرها؟</b></summary>
 
-باقة بريميوم بـ ⁦$7.99⁩ بالشهر، أو ⁦$23.99⁩ لمدة 3 أشهر. تشتريها من متجرنا وتفعّل الكود في panel.d7team.com
+باقة بريميوم بـ ⁦$7.99⁩ بالشهر، أو ⁦$19.99⁩ لمدة 3 أشهر وهي أوفر من الشهري. تشتريها من متجرنا وتفعّل الكود في panel.d7team.com
 
 </details>
 
@@ -513,8 +513,8 @@ ensure DeltaPanel
 
 ### منتجات ثانية من دلتا سفن
 
-- [Advanced MDT](https://github.com/d7teamdev/advanced-mdt) — سكربت MDT للشرطة في فايف ام لـ QBCore و QBox و CFW
-- [Advanced BossMenu](https://github.com/d7teamdev/advanced-bossmenu) — سكربت بوس منيو فايف ام لـ QBCore و QBox و CFW
+- [ام دي تي المطور](https://github.com/d7teamdev/advanced-mdt) — سكربت MDT للشرطة في فايف ام لـ QBCore و QBox و CFW
+- [بوس منيو المطور](https://github.com/d7teamdev/advanced-bossmenu) — سكربت بوس منيو فايف ام لـ QBCore و QBox و CFW
 - [سيارات فايف ام مضافة](https://d7team.com/ar/cars)
 
 </div>
