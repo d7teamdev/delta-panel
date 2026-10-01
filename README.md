@@ -11,7 +11,7 @@
 
 FiveM admin panel for QBCore, QBox & CFW: manage online and offline players, inventories, vehicles, bans and Live Screens from the browser or in game.
 
-Delta Panel gives your staff one place to run the server: who is online, every character and vehicle, inventories and stashes, bans, the priority queue, and a full log of who did what. They can watch a player's screen while it happens, and act on what they see. It opens in a browser, and since 2.1 it opens in the game too — your admins type /delta and get the same pages with the same permissions, without leaving the server.
+Delta Panel gives your staff one place to run the server: who is online, every character and vehicle, inventories and stashes, bans, the priority queue, and a full log of who did what. They can watch a player's screen while it happens, and act on what they see. It opens in a browser, and since 2.1 it opens in the game too — your admins type /delta and get the same pages with the same permissions, without leaving the server. Version 2.2 adds an activity chart for players and admins by day, week or month, restoring a deleted character within 90 days, several roles per admin, and support for qs, ps and lj inventories.
 
 > This repository is documentation only. The resource is sold on our store and downloaded from the Client Area after you redeem your code.
 
@@ -41,6 +41,7 @@ Delta Panel gives your staff one place to run the server: who is online, every c
 - Change License — move a character to the Rockstar licence it should load with.
 - Change a character's citizen ID across every table that references it.
 - Delete a character, with a typed confirmation.
+- Restore a deleted character within 90 days: a full copy is kept when it is deleted, and the audit log brings it back.
 - Set a connected player's permission level: user, mod, admin or god.
 
 <img src="images/character-profile.webp" alt="Character profile" width="720">
@@ -98,7 +99,7 @@ Delta Panel gives your staff one place to run the server: who is online, every c
 
 #### Server overview
 
-- Dashboard: who is online now, activity over the day and the last players to join.
+- Dashboard: who is online now, the last players to join, and an activity chart of players and admins by day, week or month.
 - Online players with their characters, one click from each profile.
 - Priority and queue: grant or remove priority, move a player in the queue, or remove them.
 - Gangs and their members.
@@ -109,7 +110,7 @@ Delta Panel gives your staff one place to run the server: who is online, every c
 #### Staff, permissions and logs
 
 - Admins and roles with per-permission control over every page and action.
-- A member can hold more than one role.
+- Give one admin several roles, each with its own permissions — they get everything those roles allow together.
 - Audit log of every admin action — who, what, to whom and when — with Discord webhooks.
 - Several servers under one account, each with its own admins and settings.
 - FiveM Config page: appearance resource, the in-game command, and your own cuff, uncuff, revive and clothing events.
@@ -153,6 +154,7 @@ Delta Panel gives your staff one place to run the server: who is online, every c
 
 - Advanced player control, online and offline
 - Full control of the character
+- Restore deleted characters within 90 days
 - Live screens from the site and the menu
 - Detailed logs on the site and Discord
 
@@ -222,7 +224,21 @@ Yes. Typing /delta opens the same pages with the same permissions, without leavi
 <details>
 <summary><b>Can I limit what each admin can do?</b></summary>
 
-Yes. Every page and every action has its own permission. Build roles from them, give a member one or more roles, and every action they take is written to the audit log.
+Yes. Every page and every action has its own permission. Build roles from them and give an admin one role or several — they get everything those roles allow together — and every action they take is written to the audit log.
+
+</details>
+
+<details>
+<summary><b>Can I restore a deleted character?</b></summary>
+
+Yes, within 90 days. When a character is deleted, Delta Panel keeps a full copy of it on your own server's database, and you restore it from the audit log — money, job, inventory, vehicles and everything else that was deleted with it.
+
+</details>
+
+<details>
+<summary><b>Can I see how active my server is over time?</b></summary>
+
+Yes. The dashboard charts how many players and how many admins were online, by the hour for the last day, and by day for the last week or month.
 
 </details>
 
@@ -267,7 +283,7 @@ Support is on our Discord: [discord.gg/d-7](https://discord.gg/d-7). Issues are 
 
 لوحة تحكم سيرفر فايف ام لـ QBCore و QBox و CFW: تحكم بالاعبين المتصلين وغير المتصلين، الإنفنتري، المركبات، الحظر والشاشات المباشرة من المتصفح أو داخل اللعبة.
 
-لوحة دلتا تجمع لطاقمك كل شي بمكان واحد: مين متصل، كل الشخصيات والمركبات، الإنفنتري والمخازن، البانات، قائمة الأولوية، وسجل كامل لمين سوّى وش. يقدرون يشوفون شاشة اللاعب لحظة بلحظة وياخذون إجراء على الي شافوه. تفتح بالمتصفح، ومن تحديث 2.1 تفتح جوّه اللعبة بعد — الإداري يكتب ⁦/delta⁩ وتجيه نفس الصفحات بنفس الصلاحيات، بدون ما يطلع من السيرفر.
+لوحة دلتا تجمع لطاقمك كل شي بمكان واحد: مين متصل، كل الشخصيات والمركبات، الإنفنتري والمخازن، البانات، قائمة الأولوية، وسجل كامل لمين سوّى وش. يقدرون يشوفون شاشة اللاعب لحظة بلحظة وياخذون إجراء على الي شافوه. تفتح بالمتصفح، ومن تحديث 2.1 تفتح جوّه اللعبة بعد — الإداري يكتب ⁦/delta⁩ وتجيه نفس الصفحات بنفس الصلاحيات، بدون ما يطلع من السيرفر. وتحديث 2.2 يضيف رسم نشاط للاعبين والإداريين باليوم والأسبوع والشهر، واسترجاع الشخصية المحذوفة خلال 90 يوم، وأكثر من رتبة للإداري الواحد، ودعم إنفنتري qs و ps و lj
 
 > هذا المستودع للتعريف والشرح فقط. الريسورس يُباع في متجرنا، وتحمّله من منطقة العميل بعد ما تفعّل الكود
 
@@ -297,6 +313,7 @@ Support is on our Discord: [discord.gg/d-7](https://discord.gg/d-7). Issues are 
 - تغيير اللايسنس — تنقل الشخصية للايسنس روكستار الي المفروض تنفتح عليه
 - تغيير رقم المواطن للشخصية في كل الجداول المرتبطة فيه
 - حذف شخصية، مع تأكيد مكتوب
+- استرجاع الشخصية المحذوفة خلال 90 يوم: تنحفظ نسخة كاملة منها وقت الحذف، وترجعها من سجل اللوق
 - تحديد صلاحية الاعب المتصل: user أو mod أو admin أو god
 
 <img src="images/character-profile.webp" alt="Character profile" width="720">
@@ -354,7 +371,7 @@ Support is on our Discord: [discord.gg/d-7](https://discord.gg/d-7). Issues are 
 
 #### نظرة على السيرفر
 
-- لوحة المعلومات: مين متصل الحين، نشاط السيرفر خلال اليوم، وآخر الي دخلوا
+- لوحة المعلومات: مين متصل الحين، آخر الي دخلوا، ورسم نشاط للاعبين والإداريين باليوم أو الأسبوع أو الشهر
 - الاعبين المتصلين مع شخصياتهم، وكل ملف على بعد ضغطة
 - الأولوية والانتظار: إعطاء أو سحب أولوية، تحريك لاعب بالطابور، أو إخراجه منه
 - العصابات وأعضاؤها
@@ -365,7 +382,7 @@ Support is on our Discord: [discord.gg/d-7](https://discord.gg/d-7). Issues are 
 #### الطاقم والصلاحيات واللوقات
 
 - إداريين ورتب مع تحكم بكل صلاحية على حدة لكل صفحة وإجراء
-- العضو يقدر يكون عنده أكثر من رتبة
+- تقدر تعطي الإداري أكثر من رتبة، وكل رتبة بصلاحياتها — ويكون له كل الي تسمح فيه رتبه مع بعض
 - سجل لكل إجراء إداري — مين، وش سوّى، على مين ومتى — مع ويب هوك دسكورد
 - أكثر من سيرفر تحت حساب واحد، وكل سيرفر له إدارييه وإعداداته
 - صفحة FiveM Config: ريسورس الملابس، أمر اللعبة، وأحداث التكبيل وفكه والإنعاش والملابس الخاصة بسيرفرك
@@ -409,6 +426,7 @@ Support is on our Discord: [discord.gg/d-7](https://discord.gg/d-7). Issues are 
 
 - تحكم متطور بالاعب، متصل وغير متصل
 - تحكم كامل بالشخصية
+- استرجاع الشخصيات المحذوفة خلال 90 يوم
 - شاشات مباشرة من الموقع والمنيو
 - لوقات مفصّلة بالموقع والدسكورد
 
@@ -482,7 +500,21 @@ ensure DeltaPanel
 <details>
 <summary><b>أقدر أحدد وش يسوي كل إداري؟</b></summary>
 
-إيه. كل صفحة وكل إجراء له صلاحية خاصة. تسوي رتب منها، تعطي العضو رتبة أو أكثر، وكل إجراء يسويه ينكتب بسجل اللوق.
+إيه. كل صفحة وكل إجراء له صلاحية خاصة. تسوي رتب منها وتعطي الإداري رتبة وحدة أو أكثر — ويكون له كل الي تسمح فيه رتبه مع بعض — وكل إجراء يسويه ينكتب بسجل اللوق.
+
+</details>
+
+<details>
+<summary><b>أقدر أسترجع شخصية انحذفت؟</b></summary>
+
+إيه، خلال 90 يوم. لما تنحذف شخصية، لوحة دلتا تحفظ نسخة كاملة منها في قاعدة بيانات سيرفرك نفسه، وتسترجعها من سجل اللوق — الفلوس والوظيفة والإنفنتري والمركبات وكل شي انحذف معها.
+
+</details>
+
+<details>
+<summary><b>أقدر أشوف نشاط سيرفري مع الوقت؟</b></summary>
+
+إيه. لوحة المعلومات فيها رسم لعدد الاعبين وعدد الإداريين المتصلين، بالساعة لآخر يوم، وباليوم لآخر أسبوع أو شهر.
 
 </details>
 
