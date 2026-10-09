@@ -1,15 +1,15 @@
 <p align="center"><img src="https://d7team.com/icon-512.png" width="88" alt="Delta Seven"></p>
 <h1 align="center">Delta Panel</h1>
-<p align="center"><b>FiveM Admin Panel for QBCore, QBox & CFW Servers</b></p>
+<p align="center"><b>FiveM Admin Panel for QBCore, QBox, ESX, vRP & CFW Servers</b></p>
 <p align="center"><a href="#english">English</a> · <a href="#arabic">العربية</a> · <a href="#screenshots">Screenshots · الصور</a></p>
 
 <p align="center"><a href="https://d7team.com/products/delta-panel"><img src="images/in-game-dashboard.webp" alt="Delta Panel" width="860"></a></p>
 
 <a id="english"></a>
 
-## Delta Panel — FiveM Admin Panel for QBCore, QBox & CFW Servers
+## Delta Panel — FiveM Admin Panel for QBCore, QBox, ESX, vRP & CFW Servers
 
-FiveM admin panel for QBCore, QBox & CFW: manage online and offline players, inventories, vehicles, bans and Live Screens from the browser or in game.
+FiveM admin panel for QBCore, QBox, ESX, vRP & CFW: manage online and offline players, inventories, vehicles, bans and Live Screens, in browser or game.
 
 Delta Panel gives your staff one place to run the server: who is online, every character and vehicle, inventories and stashes, bans, the priority queue, and a full log of who did what. They can watch a player's screen while it happens, and act on what they see. It opens in a browser, and since 2.1 it opens in the game too — your admins type /delta and get the same pages with the same permissions, without leaving the server. Version 2.2 adds an activity chart for players and admins by day, week or month, restoring a deleted character within 90 days, several roles per admin, and support for qs, ps and lj inventories.
 
@@ -21,8 +21,8 @@ Delta Panel gives your staff one place to run the server: who is online, every c
 
 | | |
 |---|---|
-| **Works with** | QBCore and QBox servers, CFW included |
-| **Inventories** | ox_inventory, qb-inventory, qs-inventory, ps-inventory and lj-inventory |
+| **Works with** | QBCore, QBox, ESX and vRP servers, CFW included |
+| **Inventories** | ox_inventory, qb-inventory, qs-inventory, ps-inventory and lj-inventory, and the inventories built into ESX and vRP |
 | **Where it runs** | In the browser, and in the game with /delta |
 | **Players** | Online and offline |
 | **Sign-in** | Discord OAuth2 |
@@ -166,9 +166,10 @@ Delta Panel gives your staff one place to run the server: who is online, every c
 
 ### Requirements
 
-- A QBCore or QBox server, CFW included
+- A QBCore, QBox, ESX or vRP server, CFW included
 - oxmysql
 - ox_inventory, qb-inventory, qs-inventory, ps-inventory or lj-inventory
+- Or the inventory built into ESX (es_extended) or vRP (vrp)
 - A Delta Panel licence and a Discord account
 
 ### Installation
@@ -208,9 +209,9 @@ Yes. Money, job, gang, identity, metadata, vehicles, stashes, bans, licence and 
 </details>
 
 <details>
-<summary><b>Does Delta Panel work on QBCore, QBox and CFW?</b></summary>
+<summary><b>Does Delta Panel work on QBCore, QBox, ESX, vRP and CFW?</b></summary>
 
-Yes. It detects your server's framework and inventory on its own, with ox_inventory, qb-inventory, qs-inventory, ps-inventory and lj-inventory. There is no framework setting to get wrong.
+Yes. It detects your server's framework and inventory on its own, with ox_inventory, qb-inventory, qs-inventory, ps-inventory and lj-inventory, and the inventories built into ESX and vRP. There is no framework setting to get wrong. On ESX and vRP there are no gangs and no deleting or restoring characters, and vRP has no Dupe Scanner.
 
 </details>
 
@@ -269,8 +270,8 @@ Support is on our Discord: [discord.gg/d-7](https://discord.gg/d-7). Issues are 
 
 ### More from Delta Seven
 
-- [Advanced MDT](https://github.com/d7teamdev/advanced-mdt) — FiveM Police MDT for QBCore, QBox & CFW
-- [Advanced BossMenu](https://github.com/d7teamdev/advanced-bossmenu) — FiveM Boss Menu for QBCore, QBox & CFW
+- [Advanced MDT](https://github.com/d7teamdev/advanced-mdt) — FiveM Police MDT for QBCore, QBox, ESX & CFW
+- [Advanced BossMenu](https://github.com/d7teamdev/advanced-bossmenu) — FiveM Boss Menu for QBCore, QBox, ESX & CFW
 - [Add-on FiveM cars](https://d7team.com/cars)
 
 ---
@@ -279,9 +280,9 @@ Support is on our Discord: [discord.gg/d-7](https://discord.gg/d-7). Issues are 
 
 <div dir="rtl">
 
-## لوحة تحكم دلتا — لوحة تحكم سيرفرات فايف ام لـ QBCore و QBox
+## لوحة تحكم دلتا — لوحة تحكم سيرفرات فايف ام لـ QBCore و QBox و ESX و vRP
 
-لوحة تحكم سيرفر فايف ام لـ QBCore و QBox و CFW: تحكم بالاعبين المتصلين وغير المتصلين، الإنفنتري، المركبات، الحظر والشاشات المباشرة من المتصفح أو داخل اللعبة.
+لوحة تحكم سيرفر فايف ام لـ QBCore و QBox و ESX و vRP و CFW: تحكم بالاعبين المتصلين وغير المتصلين، الإنفنتري، المركبات، الحظر والشاشات المباشرة من المتصفح أو اللعبة.
 
 لوحة دلتا تجمع لطاقمك كل شي بمكان واحد: مين متصل، كل الشخصيات والمركبات، الإنفنتري والمخازن، البانات، قائمة الأولوية، وسجل كامل لمين سوّى وش. يقدرون يشوفون شاشة اللاعب لحظة بلحظة وياخذون إجراء على الي شافوه. تفتح بالمتصفح، ومن تحديث 2.1 تفتح جوّه اللعبة بعد — الإداري يكتب ⁦/delta⁩ وتجيه نفس الصفحات بنفس الصلاحيات، بدون ما يطلع من السيرفر. وتحديث 2.2 يضيف رسم نشاط للاعبين والإداريين باليوم والأسبوع والشهر، واسترجاع الشخصية المحذوفة خلال 90 يوم، وأكثر من رتبة للإداري الواحد، ودعم إنفنتري qs و ps و lj
 
@@ -293,8 +294,8 @@ Support is on our Discord: [discord.gg/d-7](https://discord.gg/d-7). Issues are 
 
 | | |
 |---|---|
-| **يشتغل مع** | سيرفرات QBCore و QBox، ومعها CFW |
-| **الإنفنتري** | ox_inventory و qb-inventory و qs-inventory و ps-inventory و lj-inventory |
+| **يشتغل مع** | سيرفرات QBCore و QBox و ESX و vRP، ومعها CFW |
+| **الإنفنتري** | ox_inventory و qb-inventory و qs-inventory و ps-inventory و lj-inventory، والإنفنتري المدمج في ESX و vRP |
 | **وين تشتغل** | بالمتصفح، وداخل اللعبة بأمر ⁦/delta⁩ |
 | **الاعبين** | المتصلين وغير المتصلين |
 | **تسجيل الدخول** | Discord OAuth2 |
@@ -438,9 +439,10 @@ Support is on our Discord: [discord.gg/d-7](https://discord.gg/d-7). Issues are 
 
 ### المتطلبات
 
-- سيرفر QBCore أو QBox، ومعها CFW
+- سيرفر QBCore أو QBox أو ESX أو vRP، ومعها CFW
 - oxmysql
 - ox_inventory أو qb-inventory أو qs-inventory أو ps-inventory أو lj-inventory
+- أو المخزون المدمج في ESX ‏(es_extended) أو vRP ‏(vrp)
 - ترخيص لوحة دلتا وحساب دسكورد
 
 ### التثبيت
@@ -484,9 +486,9 @@ ensure DeltaPanel
 </details>
 
 <details>
-<summary><b>لوحة دلتا تشتغل على QBCore و QBox و CFW؟</b></summary>
+<summary><b>لوحة دلتا تشتغل على QBCore و QBox و ESX و vRP و CFW؟</b></summary>
 
-إيه. تتعرف على الفريم وورك والإنفنتري بسيرفرك لحالها، مع ox_inventory و qb-inventory و qs-inventory و ps-inventory و lj-inventory. ما فيه إعداد فريم وورك تغلط فيه.
+إيه. تتعرف على الفريم وورك والإنفنتري بسيرفرك لحالها، مع ox_inventory و qb-inventory و qs-inventory و ps-inventory و lj-inventory، والإنفنتري المدمج في ESX و vRP. ما فيه إعداد فريم وورك تغلط فيه. على ESX و vRP ما فيه عصابات ولا حذف واسترجاع الشخصيات، و vRP ما فيه فحص التدبيل.
 
 </details>
 
@@ -545,8 +547,8 @@ ensure DeltaPanel
 
 ### منتجات ثانية من دلتا سفن
 
-- [ام دي تي المطور](https://github.com/d7teamdev/advanced-mdt) — سكربت MDT للشرطة في فايف ام لـ QBCore و QBox و CFW
-- [بوس منيو المطور](https://github.com/d7teamdev/advanced-bossmenu) — سكربت بوس منيو فايف ام لـ QBCore و QBox و CFW
+- [ام دي تي المطور](https://github.com/d7teamdev/advanced-mdt) — سكربت MDT للشرطة في فايف ام لـ QBCore و QBox و ESX و CFW
+- [بوس منيو المطور](https://github.com/d7teamdev/advanced-bossmenu) — سكربت بوس منيو فايف ام لـ QBCore و QBox و ESX و CFW
 - [سيارات فايف ام مضافة](https://d7team.com/ar/cars)
 
 </div>
