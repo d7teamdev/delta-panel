@@ -26,7 +26,7 @@ Delta Panel gives your staff one place to run the server: who is online, every c
 | **Where it runs** | In the browser, and in the game with /delta |
 | **Players** | Online and offline |
 | **Sign-in** | Discord OAuth2 |
-| **Languages** | Arabic and English |
+| **Languages** | Arabic and English, in the browser and in game |
 
 ### Features
 
@@ -54,6 +54,7 @@ Delta Panel gives your staff one place to run the server: who is online, every c
 - Cuff and uncuff, and release from jail.
 - Kick with a reason the player sees.
 - Direct message a player, or send an announcement to the whole server.
+- Delta's own notices to players come in your server's language, Arabic or English.
 - Every action reports back only once the change has really happened on the server.
 
 <img src="images/quick-actions.webp" alt="Quick actions and inventory" width="720">
@@ -113,8 +114,8 @@ Delta Panel gives your staff one place to run the server: who is online, every c
 - Give one admin several roles, each with its own permissions — they get everything those roles allow together.
 - Audit log of every admin action — who, what, to whom and when — with Discord webhooks.
 - Several servers under one account, each with its own admins and settings.
-- FiveM Config page: appearance resource, the in-game command, and your own cuff, uncuff, revive and clothing events.
-- In-game menu on /delta with the same pages and the same permissions.
+- FiveM Config page: appearance resource, the in-game command, the game language, and your own cuff, uncuff, revive and clothing events.
+- In-game menu on /delta with the same pages and the same permissions, in Arabic or English.
 
 <img src="images/admins-roles.webp" alt="Admins & Roles" width="720">
 
@@ -188,14 +189,17 @@ Delta Panel gives your staff one place to run the server: who is online, every c
    ensure DeltaPanel
    ```
 
-7. Restart the server.
+7. On ESX or vRP, start es_extended or vrp in place of qb-core, in the same order.
+8. Restart the server.
 
 Configuration, first start, updates and every console message explained: [Installation guide](https://d7team.com/guides/delta-panel)
 
 ### Pricing
 
-- **$7.99 / month** — [Delta Panel Premium](https://store.d7team.com/delta-panel-30-days/p157845357)
-- **$19.99 / 3 months** — [Delta Panel Premium, 3 months](https://store.d7team.com/delta-panel-90-days/p1519399239)
+- **$7.99 / month** — [Delta Panel](https://store.d7team.com/delta-panel-30-days/p157845357)
+- **$19.99 / 3 months** — [Delta Panel, 3 months](https://store.d7team.com/delta-panel-90-days/p1519399239)
+- **$13.99 / month** — [Premium Bundle (Delta Panel, Advanced MDT and Advanced BossMenu)](https://store.d7team.com/premium-bundle-30-days/p387462061)
+- **$34.99 / 3 months** — [Premium Bundle, 3 months](https://store.d7team.com/premium-bundle-90-days/p645358899)
 
 [Store](https://store.d7team.com/delta-panel-30-days/p157845357)
 
@@ -212,6 +216,13 @@ Yes. Money, job, gang, identity, metadata, vehicles, stashes, bans, licence and 
 <summary><b>Does Delta Panel work on QBCore, QBox, ESX, vRP and CFW?</b></summary>
 
 Yes. It detects your server's framework and inventory on its own, with ox_inventory, qb-inventory, qs-inventory, ps-inventory and lj-inventory, and the inventories built into ESX and vRP. There is no framework setting to get wrong. On ESX and vRP there are no gangs and no deleting or restoring characters, and vRP has no Dupe Scanner.
+
+</details>
+
+<details>
+<summary><b>Can Delta talk to my players in Arabic?</b></summary>
+
+Yes. FiveM Config has one game language for the whole server, Arabic or English. Delta's notices to players and the /delta menu follow it. An announcement or a direct message you write is sent exactly as you wrote it.
 
 </details>
 
@@ -260,7 +271,7 @@ One. A licence is tied to one server IP. One account can manage several servers,
 <details>
 <summary><b>How much does it cost?</b></summary>
 
-Premium is $7.99 a month, or $19.99 for 3 months — cheaper than paying monthly. Buy it on our store and redeem the code on panel.d7team.com.
+Delta Panel is $7.99 a month, or $19.99 for 3 months — cheaper than paying monthly. It also comes with Advanced MDT and Advanced BossMenu in the Premium Bundle, at $13.99 a month or $34.99 for 3 months. Buy on our store and redeem the code on panel.d7team.com.
 
 </details>
 
@@ -299,7 +310,7 @@ Support is on our Discord: [discord.gg/d-7](https://discord.gg/d-7). Issues are 
 | **وين تشتغل** | بالمتصفح، وداخل اللعبة بأمر ⁦/delta⁩ |
 | **الاعبين** | المتصلين وغير المتصلين |
 | **تسجيل الدخول** | Discord OAuth2 |
-| **اللغات** | العربي والإنجليزي |
+| **اللغات** | العربي والإنجليزي، بالمتصفح وداخل اللعبة |
 
 ### المميزات
 
@@ -327,6 +338,7 @@ Support is on our Discord: [discord.gg/d-7](https://discord.gg/d-7). Issues are 
 - تكبيل وفك تكبيل، وإخراج من السجن
 - طرد مع سبب يشوفه الاعب
 - رسالة خاصة للاعب، أو إعلان لكل السيرفر
+- إشعارات دلتا للاعبين تجي بلغة سيرفرك، عربي أو إنجليزي
 - كل إجراء يرجّع لك النتيجة بعد ما يتأكد إن التغيير صار فعلاً بالسيرفر
 
 <img src="images/quick-actions.webp" alt="Quick actions and inventory" width="720">
@@ -386,8 +398,8 @@ Support is on our Discord: [discord.gg/d-7](https://discord.gg/d-7). Issues are 
 - تقدر تعطي الإداري أكثر من رتبة، وكل رتبة بصلاحياتها — ويكون له كل الي تسمح فيه رتبه مع بعض
 - سجل لكل إجراء إداري — مين، وش سوّى، على مين ومتى — مع ويب هوك دسكورد
 - أكثر من سيرفر تحت حساب واحد، وكل سيرفر له إدارييه وإعداداته
-- صفحة FiveM Config: ريسورس الملابس، أمر اللعبة، وأحداث التكبيل وفكه والإنعاش والملابس الخاصة بسيرفرك
-- منيو داخل اللعبة على ⁦/delta⁩ بنفس الصفحات ونفس الصلاحيات
+- صفحة FiveM Config: ريسورس الملابس، أمر اللعبة، لغة اللعبة، وأحداث التكبيل وفكه والإنعاش والملابس الخاصة بسيرفرك
+- منيو داخل اللعبة على ⁦/delta⁩ بنفس الصفحات ونفس الصلاحيات، بالعربي أو الإنجليزي
 
 <img src="images/admins-roles.webp" alt="Admins & Roles" width="720">
 
@@ -465,14 +477,17 @@ ensure DeltaPanel
 
 <div dir="rtl">
 
-7. سوّ ريستارت للسيرفر.
+7. على ESX أو vRP، شغّل es_extended أو vrp مكان qb-core بنفس الترتيب.
+8. سوّ ريستارت للسيرفر.
 
 الإعدادات، أول تشغيل، التحديثات، وشرح كل رسالة بالكونسول: [شرح التثبيت](https://d7team.com/ar/guides/delta-panel)
 
 ### الأسعار
 
-- **⁦$7.99⁩ بالشهر** — [لوحة دلتا بريميوم](https://store.d7team.com/delta-panel-30-days/p157845357)
-- **⁦$19.99⁩ كل 3 أشهر** — [لوحة دلتا بريميوم لمدة 3 أشهر](https://store.d7team.com/delta-panel-90-days/p1519399239)
+- **⁦$7.99⁩ بالشهر** — [لوحة دلتا](https://store.d7team.com/delta-panel-30-days/p157845357)
+- **⁦$19.99⁩ كل 3 أشهر** — [لوحة دلتا لمدة 3 أشهر](https://store.d7team.com/delta-panel-90-days/p1519399239)
+- **⁦$13.99⁩ بالشهر** — [باقة بريميوم (لوحة دلتا و Advanced MDT و Advanced BossMenu)](https://store.d7team.com/premium-bundle-30-days/p387462061)
+- **⁦$34.99⁩ كل 3 أشهر** — [باقة بريميوم لمدة 3 أشهر](https://store.d7team.com/premium-bundle-90-days/p645358899)
 
 [المتجر](https://store.d7team.com/delta-panel-30-days/p157845357)
 
@@ -489,6 +504,13 @@ ensure DeltaPanel
 <summary><b>لوحة دلتا تشتغل على QBCore و QBox و ESX و vRP و CFW؟</b></summary>
 
 إيه. تتعرف على الفريم وورك والإنفنتري بسيرفرك لحالها، مع ox_inventory و qb-inventory و qs-inventory و ps-inventory و lj-inventory، والإنفنتري المدمج في ESX و vRP. ما فيه إعداد فريم وورك تغلط فيه. على ESX و vRP ما فيه عصابات ولا حذف واسترجاع الشخصيات، و vRP ما فيه فحص التدبيل.
+
+</details>
+
+<details>
+<summary><b>دلتا تقدر تكلم لاعبيني بالعربي؟</b></summary>
+
+إيه. في FiveM Config لغة وحدة للعبة لكل السيرفر، عربي أو إنجليزي. إشعارات دلتا للاعبين ومنيو ⁦/delta⁩ يمشون عليها. والإعلان أو الرسالة الخاصة الي تكتبها توصل مثل ما كتبتها.
 
 </details>
 
@@ -537,7 +559,7 @@ ensure DeltaPanel
 <details>
 <summary><b>كم سعرها؟</b></summary>
 
-باقة بريميوم بـ ⁦$7.99⁩ بالشهر، أو ⁦$19.99⁩ لمدة 3 أشهر وهي أوفر من الشهري. تشتريها من متجرنا وتفعّل الكود في panel.d7team.com
+لوحة دلتا بـ ⁦$7.99⁩ بالشهر، أو ⁦$19.99⁩ لمدة 3 أشهر وهي أوفر من الشهري. وتجي كمان مع ام دي تي المطور و بوس منيو المطور في باقة بريميوم بـ ⁦$13.99⁩ بالشهر أو ⁦$34.99⁩ لمدة 3 أشهر. تشتريها من متجرنا وتفعّل الكود في panel.d7team.com
 
 </details>
 
