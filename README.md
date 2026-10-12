@@ -11,7 +11,7 @@
 
 FiveM admin panel for QBCore, QBox, ESX, vRP & CFW: manage online and offline players, inventories, vehicles, bans and Live Screens, in browser or game.
 
-Delta Panel gives your staff one place to run the server: who is online, every character and vehicle, inventories and stashes, bans, the priority queue, and a full log of who did what. They can watch a player's screen while it happens, and act on what they see. It opens in a browser, and since 2.1 it opens in the game too — your admins type /delta and get the same pages with the same permissions, without leaving the server. Version 2.2 adds an activity chart for players and admins by day, week or month, restoring a deleted character within 90 days, several roles per admin, and support for qs, ps and lj inventories. Version 2.3 runs on ESX and vRP too, speaks to your players in Arabic or English, and opens /delta fully in Arabic.
+Delta Panel gives your staff one place to run the server: who is online, every character and vehicle, inventories and stashes, bans, the priority queue, and a full log of who did what. They can watch a player's screen as it happens and act on what they see. It works in the browser and inside the game: your admins type /delta and get the same pages with the same permissions, without leaving the server. It runs on QBCore, QBox, ESX and vRP, with an activity chart for players and admins, restoring a deleted character within 90 days, several roles for one admin, and in-game notifications in Arabic or English.
 
 > This repository is documentation only. The resource is sold on our store and downloaded from the Client Area after you redeem your code.
 
@@ -22,7 +22,7 @@ Delta Panel gives your staff one place to run the server: who is online, every c
 | | |
 |---|---|
 | **Works with** | QBCore, QBox, ESX and vRP servers, CFW included |
-| **Inventories** | ox_inventory, qb-inventory, qs-inventory, ps-inventory and lj-inventory, and the inventories built into ESX and vRP |
+| **Inventories** | Most inventory resources, on every framework |
 | **Where it runs** | In the browser, and in the game with /delta |
 | **Players** | Online and offline |
 | **Sign-in** | Discord OAuth2 |
@@ -40,7 +40,7 @@ Delta Panel gives your staff one place to run the server: who is online, every c
 - Edit character metadata key by key, with the right control for each value.
 - Change License — move a character to the Rockstar licence it should load with.
 - Change a character's citizen ID across every table that references it.
-- A character's ID shows as your framework shows it: citizen ID on QB, the social security number on ESX when your server has one, user ID on vRP.
+- Shows the character ID and identity number your framework uses.
 - Delete a character, with a typed confirmation.
 - Restore a deleted character within 90 days: a full copy is kept when it is deleted, and the audit log brings it back.
 - Set a connected player's permission level: user, mod, admin or god.
@@ -55,7 +55,7 @@ Delta Panel gives your staff one place to run the server: who is online, every c
 - Cuff and uncuff, and release from jail.
 - Kick with a reason the player sees.
 - Direct message a player, or send an announcement to the whole server.
-- Delta's own notices to players come in your server's language, Arabic or English.
+- Choose the language of Delta's in-game notifications and alerts: Arabic or English.
 - Every action reports back only once the change has really happened on the server.
 
 <img src="images/quick-actions.webp" alt="Quick actions and inventory" width="720">
@@ -103,8 +103,7 @@ Delta Panel gives your staff one place to run the server: who is online, every c
 
 - Dashboard: who is online now, the last players to join, and an activity chart of players and admins by day, week or month.
 - Online players with their characters, one click from each profile.
-- Priority and queue: name each priority (like VIP Gold), grant, change or remove it, and move a player to any place in the queue or out of it.
-- Saved priorities come back on their own after a restart.
+- Give players priority under names you choose (like VIP Gold), with full control of the queue.
 - Gangs and their members.
 - Leaderboards your players can open in their browser, with weekly and all-time boards.
 
@@ -116,8 +115,8 @@ Delta Panel gives your staff one place to run the server: who is online, every c
 - Give one admin several roles, each with its own permissions — they get everything those roles allow together.
 - Audit log of every admin action — who, what, to whom and when — with Discord webhooks.
 - Several servers under one account, each with its own admins and settings.
-- FiveM Config page: appearance resource, the in-game command, the game language, and your own cuff, uncuff, revive and clothing events.
-- In-game menu on /delta with the same pages and the same permissions, in Arabic or English.
+- FiveM Config page: the resource's settings, edited from the website, with options that follow your framework.
+- In-game menu on /delta with the same pages and the same permissions.
 
 <img src="images/admins-roles.webp" alt="Admins & Roles" width="720">
 
@@ -169,10 +168,15 @@ Delta Panel gives your staff one place to run the server: who is online, every c
 
 ### Requirements
 
-- A QBCore, QBox, ESX or vRP server, CFW included
+- **QBCore:** A QBCore server, CFW included
+- **QBox:** A QBox server with qbx_core and ox_lib
+- **ESX:** An ESX server with es_extended
+- **vRP:** A vRP server with vrp
 - oxmysql
-- ox_inventory, qb-inventory, qs-inventory, ps-inventory or lj-inventory
-- Or the inventory built into ESX (es_extended) or vRP (vrp)
+- **QBCore:** ox_inventory, qb-inventory, qs-inventory, ps-inventory or lj-inventory
+- **QBox:** ox_inventory
+- **ESX:** ox_inventory, or the inventory built into ESX
+- **vRP:** The inventory built into vRP
 - A Delta Panel licence and a Discord account
 
 ### Installation
@@ -184,6 +188,8 @@ Delta Panel gives your staff one place to run the server: who is online, every c
 5. Put the DeltaPanel folder in resources. Keep its name.
 6. In server.cfg, start it after your database, framework and inventory:
 
+   **QBCore**
+
    ```cfg
    ensure oxmysql
    ensure qb-core
@@ -191,17 +197,48 @@ Delta Panel gives your staff one place to run the server: who is online, every c
    ensure DeltaPanel
    ```
 
-7. On ESX or vRP, start es_extended or vrp in place of qb-core, in the same order.
-8. Restart the server.
+
+   **QBox**
+
+   ```cfg
+   ensure oxmysql
+   ensure ox_lib
+   ensure qbx_core
+   ensure ox_inventory
+   ensure DeltaPanel
+   ```
+
+
+   **ESX**
+
+   ```cfg
+   ensure oxmysql
+   ensure es_extended
+   ensure ox_inventory
+   ensure DeltaPanel
+   ```
+
+
+   **ESX:** On the inventory built into ESX, leave the ox_inventory line out.
+
+   **vRP:** In server.cfg, start it after your database and framework:
+
+   ```cfg
+   ensure oxmysql
+   ensure vrp
+   ensure DeltaPanel
+   ```
+
+7. Restart the server.
 
 Configuration, first start, updates and every console message explained: [Installation guide](https://d7team.com/guides/delta-panel)
 
 ### Pricing
 
 - **$7.99 / month** — [Delta Panel](https://store.d7team.com/delta-panel-30-days/p157845357)
-- **$19.99 / 3 months** — [Delta Panel, 3 months](https://store.d7team.com/delta-panel-90-days/p1519399239)
-- **$13.99 / month** — [Premium Bundle (Delta Panel, Advanced MDT and Advanced BossMenu)](https://store.d7team.com/premium-bundle-30-days/p387462061)
-- **$34.99 / 3 months** — [Premium Bundle, 3 months](https://store.d7team.com/premium-bundle-90-days/p645358899)
+- **$19.99 / quarter** — [Delta Panel, quarterly](https://store.d7team.com/delta-panel-90-days/p1519399239)
+- **$13.99 / month** — [Premium Plan (Delta Panel, Advanced MDT and Advanced BossMenu)](https://store.d7team.com/premium-bundle-30-days/p387462061)
+- **$34.99 / quarter** — [Premium Plan, quarterly](https://store.d7team.com/premium-bundle-90-days/p645358899)
 
 [Store](https://store.d7team.com/delta-panel-30-days/p157845357)
 
@@ -217,14 +254,14 @@ Yes. Money, job, gang, identity, metadata, vehicles, stashes, bans, licence and 
 <details>
 <summary><b>Does Delta Panel work on QBCore, QBox, ESX, vRP and CFW?</b></summary>
 
-Yes. It detects your server's framework and inventory on its own, with ox_inventory, qb-inventory, qs-inventory, ps-inventory and lj-inventory, and the inventories built into ESX and vRP. There is no framework setting to get wrong. On ESX and vRP there are no gangs and no deleting or restoring characters, and vRP has no Dupe Scanner.
+Yes. It detects your server's framework and inventory automatically, and most inventory resources are supported on every framework, so there is no framework setting to get wrong. On ESX and vRP there are no gangs and no deleting or restoring characters, and vRP has no Dupe Scanner.
 
 </details>
 
 <details>
-<summary><b>Can Delta talk to my players in Arabic?</b></summary>
+<summary><b>Can I choose the language of notifications for my players?</b></summary>
 
-Yes. FiveM Config has one game language for the whole server, Arabic or English. Delta's notices to players and the /delta menu follow it. An announcement or a direct message you write is sent exactly as you wrote it.
+Yes. On the FiveM Config page you choose one game language for your server, Arabic or English, and Delta's notifications and alerts reach your players in it. Announcements and direct messages written by your admins are delivered exactly as written.
 
 </details>
 
@@ -271,9 +308,9 @@ One. A licence is tied to one server IP. One account can manage several servers,
 </details>
 
 <details>
-<summary><b>How much does it cost?</b></summary>
+<summary><b>How much does Delta Panel cost?</b></summary>
 
-Delta Panel is $7.99 a month, or $19.99 for 3 months — cheaper than paying monthly. It also comes with Advanced MDT and Advanced BossMenu in the Premium Bundle, at $13.99 a month or $34.99 for 3 months. Buy on our store and redeem the code on panel.d7team.com.
+It comes with several subscription options: $7.99 monthly, $19.99 quarterly, or the Premium Plan with Advanced MDT and Advanced BossMenu from $13.99 a month.
 
 </details>
 
@@ -293,11 +330,11 @@ Support is on our Discord: [discord.gg/d-7](https://discord.gg/d-7). Issues are 
 
 <div dir="rtl">
 
-## لوحة تحكم دلتا — لوحة تحكم سيرفرات فايف ام لـ QBCore و QBox و ESX و vRP
+## لوحة دلتا — لوحة تحكم سيرفرات فايف ام لـ QBCore و QBox و ESX و vRP
 
-لوحة تحكم سيرفر فايف ام لـ QBCore و QBox و ESX و vRP و CFW: تحكم بالاعبين المتصلين وغير المتصلين، الإنفنتري، المركبات، الحظر والشاشات المباشرة من المتصفح أو اللعبة.
+لوحة تحكم سيرفر فايف ام لـ QBCore و QBox و ESX و vRP و CFW: تحكم باللاعبين المتصلين وغير المتصلين، الإنفنتري، المركبات، الحظر والشاشات المباشرة من المتصفح أو اللعبة.
 
-لوحة دلتا تجمع لطاقمك كل شي بمكان واحد: مين متصل، كل الشخصيات والمركبات، الإنفنتري والمخازن، البانات، قائمة الأولوية، وسجل كامل لمين سوّى وش. يقدرون يشوفون شاشة اللاعب لحظة بلحظة وياخذون إجراء على الي شافوه. تفتح بالمتصفح، ومن تحديث 2.1 تفتح جوّه اللعبة بعد — الإداري يكتب ⁦/delta⁩ وتجيه نفس الصفحات بنفس الصلاحيات، بدون ما يطلع من السيرفر. وتحديث 2.2 يضيف رسم نشاط للاعبين والإداريين باليوم والأسبوع والشهر، واسترجاع الشخصية المحذوفة خلال 90 يوم، وأكثر من رتبة للإداري الواحد، ودعم إنفنتري qs و ps و lj. وتحديث 2.3 يخليها تشتغل على ESX و vRP بعد، وتكلم لاعبينك بالعربي أو الإنجليزي، ومنيو ⁦/delta⁩ يصير كامل بالعربي.
+لوحة دلتا تجمع لطاقمك كل شي بمكان واحد: مين متصل، كل الشخصيات والمركبات، الإنفنتري والمخازن، البانات، قائمة الأولوية، وسجل كامل لمين سوّى وش. يقدرون يشوفون شاشة اللاعب لحظة بلحظة وياخذون إجراء على اللي شافوه. تشتغل من المتصفح ومن داخل اللعبة: الإداري يكتب ⁦/delta⁩ وتفتح له نفس الصفحات بنفس الصلاحيات، بدون ما يطلع من السيرفر. وتدعم QBCore و QBox و ESX و vRP، مع رسم نشاط للاعبين والإداريين، واسترجاع الشخصية المحذوفة خلال 90 يوم، وأكثر من رتبة للإداري الواحد، وإشعارات داخل اللعبة بالعربي أو الإنجليزي.
 
 > هذا المستودع للتعريف والشرح فقط. الريسورس يُباع في متجرنا، وتحمّله من منطقة العميل بعد ما تفعّل الكود
 
@@ -308,15 +345,15 @@ Support is on our Discord: [discord.gg/d-7](https://discord.gg/d-7). Issues are 
 | | |
 |---|---|
 | **يشتغل مع** | سيرفرات QBCore و QBox و ESX و vRP، ومعها CFW |
-| **الإنفنتري** | ox_inventory و qb-inventory و qs-inventory و ps-inventory و lj-inventory، والإنفنتري المدمج في ESX و vRP |
+| **الإنفنتري** | أغلب ريسورسات الحقائب مدعومة، لكل أنواع الفريم وورك |
 | **وين تشتغل** | بالمتصفح، وداخل اللعبة بأمر ⁦/delta⁩ |
-| **الاعبين** | المتصلين وغير المتصلين |
+| **اللاعبين** | المتصلين وغير المتصلين |
 | **تسجيل الدخول** | Discord OAuth2 |
 | **اللغات** | العربي والإنجليزي، بالمتصفح وداخل اللعبة |
 
 ### المميزات
 
-#### الاعبين والشخصيات
+#### اللاعبين والشخصيات
 
 - ابحث في كل شخصيات السيرفر — بالاسم أو رقم المواطن أو اللايسنس — مو بس أول صفحة
 - ملف كامل لكل شخصية: الفلوس، الوظيفة والرتبة، العصابة ورتبتها، الهوية، المركبات والإنفنتري
@@ -324,24 +361,24 @@ Support is on our Discord: [discord.gg/d-7](https://discord.gg/d-7). Issues are 
 - تغيير الوظيفة والعصابة والرتبة من قوائم مقروءة من سيرفرك نفسه
 - تعديل الهوية: الاسم الأول والأخير، تاريخ الميلاد، الجنس، الجنسية ورقم الجوال
 - تعديل الميتاداتا مفتاح مفتاح، مع الأداة المناسبة لكل قيمة
-- تغيير اللايسنس — تنقل الشخصية للايسنس روكستار الي المفروض تنفتح عليه
+- تغيير اللايسنس — تنقل الشخصية للايسنس روكستار اللي المفروض تنفتح عليه
 - تغيير رقم المواطن للشخصية في كل الجداول المرتبطة فيه
-- رقم الشخصية يطلع مثل ما يعرضه فريم ووركك: على vRP الآيدي، وعلى ESX رقم الضمان الاجتماعي إذا سيرفرك يستخدمه، وعلى QB رقم المواطن
+- عرض رقم الشخصية ورقم هويتها حسب نوع الفريم وورك
 - حذف شخصية، مع تأكيد مكتوب
 - استرجاع الشخصية المحذوفة خلال 90 يوم: تنحفظ نسخة كاملة منها وقت الحذف، وترجعها من سجل اللوق
-- تحديد صلاحية الاعب المتصل: user أو mod أو admin أو god
+- تحديد صلاحية اللاعب المتصل: user أو mod أو admin أو god
 
 <img src="images/character-profile.webp" alt="Character profile" width="720">
 
-#### إجراءات سريعة على الاعبين المتصلين
+#### إجراءات سريعة على اللاعبين المتصلين
 
 - إنعاش، إطعام، وإعطاء درع
-- نقل الاعب لموقع محفوظ أو لإحداثيات محددة
-- فتح منيو الملابس على شاشة الاعب
+- نقل اللاعب لموقع محفوظ أو لإحداثيات محددة
+- فتح منيو الملابس على شاشة اللاعب
 - تكبيل وفك تكبيل، وإخراج من السجن
-- طرد مع سبب يشوفه الاعب
+- طرد مع سبب يشوفه اللاعب
 - رسالة خاصة للاعب، أو إعلان لكل السيرفر
-- إشعارات دلتا للاعبين تجي بلغة سيرفرك، عربي أو إنجليزي
+- تحديد لغة إشعارات دلتا وتنبيهاتها داخل اللعبة: عربي أو إنجليزي
 - كل إجراء يرجّع لك النتيجة بعد ما يتأكد إن التغيير صار فعلاً بالسيرفر
 
 <img src="images/quick-actions.webp" alt="Quick actions and inventory" width="720">
@@ -350,7 +387,7 @@ Support is on our Discord: [discord.gg/d-7](https://discord.gg/d-7). Issues are 
 
 - تشوف إنفنتري أي لاعب مع صور الأغراض وأسمائها
 - إعطاء أو سحب أو تنظيف الأغراض للاعب المتصل
-- نقل الأغراض بين الخانات والاعب غير متصل
+- نقل الأغراض بين الخانات واللاعب غير متصل
 - تصفح كل مخازن السيرفر، ابحث بأغراضها، أضف أو اسحب أو نظّف
 - فتح شنطة المركبة والدرج من صفحتها
 
@@ -361,13 +398,13 @@ Support is on our Discord: [discord.gg/d-7](https://discord.gg/d-7). Issues are 
 - ابحث في كل مركبات السيرفر باللوحة أو الموديل أو المالك أو الحالة
 - إعطاء مركبة، نقل ملكيتها، أو تغيير لوحتها
 - تغيير حالة تخزين المركبة، أو حذفها
-- تصليح المركبة الي راكبها الاعب المتصل
+- تصليح المركبة اللي راكبها اللاعب المتصل
 
 <img src="images/vehicles.webp" alt="Vehicles" width="720">
 
 #### الشاشات المباشرة
 
-- شاهد شاشة الاعب المتصل مباشرة من متصفحك
+- شاهد شاشة اللاعب المتصل مباشرة من متصفحك
 - أكثر من لاعب جنب بعض، وتقدر تكبّر واحد بالحجم الكامل
 - البث يشتغل بس وأنت تتابع، ويوقف لحاله أول ما تطلع
 - بدون صوت، بدون تسجيل، وما ينحفظ شي
@@ -378,8 +415,8 @@ Support is on our Discord: [discord.gg/d-7](https://discord.gg/d-7). Issues are 
 
 - الحظر بمدة وسبب، مع التعديل وفك الحظر والبحث في كل البانات
 - حماية الدخول: اشتراط دسكورد أو ستيم أو إكس بوكس، منع اللايسنس المكرر، ومنع الـ VPN
-- قواعد الأسماء: منع أكواد الألوان والرموز والأكواد الخطرة بأسماء الاعبين
-- الاعب المرفوض يشوف بطاقة واضحة فيها السبب ورابط دسكوردك
+- قواعد الأسماء: منع أكواد الألوان والرموز والأكواد الخطرة بأسماء اللاعبين
+- اللاعب المرفوض يشوف بطاقة واضحة فيها السبب ورابط دسكوردك
 - فحص التدبيل: يلقى الأسلحة المكررة في الإنفنتري والمخازن ويحذفها
 - البحث المتقدم: بحث واحد يغطي الشخصيات والمركبات والمخازن واللوقات
 
@@ -387,10 +424,9 @@ Support is on our Discord: [discord.gg/d-7](https://discord.gg/d-7). Issues are 
 
 #### نظرة على السيرفر
 
-- لوحة المعلومات: مين متصل الحين، آخر الي دخلوا، ورسم نشاط للاعبين والإداريين باليوم أو الأسبوع أو الشهر
-- الاعبين المتصلين مع شخصياتهم، وكل ملف على بعد ضغطة
-- الأولوية والانتظار: اسم لكل أولوية (مثل VIP Gold)، إعطاء أو تعديل أو سحب، وتحريك لاعب لأي مكان بالطابور أو إخراجه منه
-- الأولويات المحفوظة ترجع لحالها بعد الريستارت
+- لوحة المعلومات: مين متصل الحين، آخر اللي دخلوا، ورسم نشاط للاعبين والإداريين باليوم أو الأسبوع أو الشهر
+- اللاعبين المتصلين مع شخصياتهم، وكل ملف على بعد ضغطة
+- إضافة أولوية للاعبين بأسماء من اختيارك (مثل VIP Gold)، مع تحكم كامل بطابور الانتظار
 - العصابات وأعضاؤها
 - صفحات صدارة يفتحها لاعبينك من المتصفح، أسبوعية وعلى طول الوقت
 
@@ -399,11 +435,11 @@ Support is on our Discord: [discord.gg/d-7](https://discord.gg/d-7). Issues are 
 #### الطاقم والصلاحيات واللوقات
 
 - إداريين ورتب مع تحكم بكل صلاحية على حدة لكل صفحة وإجراء
-- تقدر تعطي الإداري أكثر من رتبة، وكل رتبة بصلاحياتها — ويكون له كل الي تسمح فيه رتبه مع بعض
+- تقدر تعطي الإداري أكثر من رتبة، وكل رتبة بصلاحياتها — ويكون له كل اللي تسمح فيه رتبه مع بعض
 - سجل لكل إجراء إداري — مين، وش سوّى، على مين ومتى — مع ويب هوك دسكورد
 - أكثر من سيرفر تحت حساب واحد، وكل سيرفر له إدارييه وإعداداته
-- صفحة FiveM Config: ريسورس الملابس، أمر اللعبة، لغة اللعبة، وأحداث التكبيل وفكه والإنعاش والملابس الخاصة بسيرفرك
-- منيو داخل اللعبة على ⁦/delta⁩ بنفس الصفحات ونفس الصلاحيات، بالعربي أو الإنجليزي
+- صفحة FiveM Config: إعدادات الريسورس تتعدل من الموقع مباشرة، وخياراتها تتغير حسب نوع الفريم وورك
+- منيو داخل اللعبة على ⁦/delta⁩ بنفس الصفحات ونفس الصلاحيات
 
 <img src="images/admins-roles.webp" alt="Admins & Roles" width="720">
 
@@ -424,7 +460,7 @@ Support is on our Discord: [discord.gg/d-7](https://discord.gg/d-7). Issues are 
 - الطرد والرسائل والإعلان
 - الصلاحية ومنيو الملابس والتكبيل والإخراج من السجن
 - إعطاء وسحب وتنظيف أغراض الإنفنتري
-- تصليح مركبة الاعب
+- تصليح مركبة اللاعب
 - الشاشات المباشرة
 
 **الاعب غير متصل**
@@ -441,7 +477,7 @@ Support is on our Discord: [discord.gg/d-7](https://discord.gg/d-7). Issues are 
 
 **بس في لوحة دلتا**
 
-- تحكم متطور بالاعب، متصل وغير متصل
+- تحكم متطور باللاعب، متصل وغير متصل
 - تحكم كامل بالشخصية
 - استرجاع الشخصيات المحذوفة خلال 90 يوم
 - شاشات مباشرة من الموقع والمنيو
@@ -455,10 +491,15 @@ Support is on our Discord: [discord.gg/d-7](https://discord.gg/d-7). Issues are 
 
 ### المتطلبات
 
-- سيرفر QBCore أو QBox أو ESX أو vRP، ومعها CFW
+- **QBCore:** سيرفر QBCore، ومعها CFW
+- **QBox:** سيرفر QBox مع qbx_core و ox_lib
+- **ESX:** سيرفر ESX مع es_extended
+- **vRP:** سيرفر vRP مع ريسورس vrp
 - oxmysql
-- ox_inventory أو qb-inventory أو qs-inventory أو ps-inventory أو lj-inventory
-- أو المخزون المدمج في ESX ‏(es_extended) أو vRP ‏(vrp)
+- **QBCore:** ox_inventory أو qb-inventory أو qs-inventory أو ps-inventory أو lj-inventory
+- **QBox:** ox_inventory
+- **ESX:** ox_inventory، أو الإنفنتري المدمج في ESX
+- **vRP:** الإنفنتري المدمج في vRP
 - ترخيص لوحة دلتا وحساب دسكورد
 
 ### التثبيت
@@ -467,8 +508,10 @@ Support is on our Discord: [discord.gg/d-7](https://discord.gg/d-7). Issues are 
 2. سجّل دخولك في panel.d7team.com عن طريق دسكورد.
 3. منطقة العميل ← تفعيل كود: اكتب الكود وآيبي سيرفرك.
 4. حمّل DeltaPanel من منطقة العميل.
-5. حط مجلد DeltaPanel في resources. لا تغيّر اسمه.
+5. حط مجلد DeltaPanel في resources، ولا تغيّر اسمه.
 6. في server.cfg، شغّله بعد قاعدة البيانات والفريم وورك والإنفنتري:
+
+**QBCore**
 
 </div>
 
@@ -481,89 +524,132 @@ ensure DeltaPanel
 
 <div dir="rtl">
 
-7. على ESX أو vRP، شغّل es_extended أو vrp مكان qb-core بنفس الترتيب.
-8. سوّ ريستارت للسيرفر.
+
+**QBox**
+
+</div>
+
+```cfg
+ensure oxmysql
+ensure ox_lib
+ensure qbx_core
+ensure ox_inventory
+ensure DeltaPanel
+```
+
+<div dir="rtl">
+
+
+**ESX**
+
+</div>
+
+```cfg
+ensure oxmysql
+ensure es_extended
+ensure ox_inventory
+ensure DeltaPanel
+```
+
+<div dir="rtl">
+
+
+**ESX:** لو تستخدم الإنفنتري المدمج في ESX، سطر ox_inventory ما تحتاجه.
+
+**vRP:** في server.cfg، شغّله بعد قاعدة البيانات والفريم وورك:
+
+</div>
+
+```cfg
+ensure oxmysql
+ensure vrp
+ensure DeltaPanel
+```
+
+<div dir="rtl">
+
+7. سوّ ريستارت للسيرفر.
 
 الإعدادات، أول تشغيل، التحديثات، وشرح كل رسالة بالكونسول: [شرح التثبيت](https://d7team.com/ar/guides/delta-panel)
 
 ### الأسعار
 
 - **⁦$7.99⁩ بالشهر** — [لوحة دلتا](https://store.d7team.com/delta-panel-30-days/p157845357)
-- **⁦$19.99⁩ كل 3 أشهر** — [لوحة دلتا لمدة 3 أشهر](https://store.d7team.com/delta-panel-90-days/p1519399239)
-- **⁦$13.99⁩ بالشهر** — [باقة بريميوم (لوحة دلتا و Advanced MDT و Advanced BossMenu)](https://store.d7team.com/premium-bundle-30-days/p387462061)
-- **⁦$34.99⁩ كل 3 أشهر** — [باقة بريميوم لمدة 3 أشهر](https://store.d7team.com/premium-bundle-90-days/p645358899)
+- **⁦$19.99⁩ ربع سنوي** — [لوحة دلتا، ربع سنوي](https://store.d7team.com/delta-panel-90-days/p1519399239)
+- **⁦$13.99⁩ بالشهر** — [باقة بريميوم (لوحة دلتا و ام دي تي متطور و بوس منيو متطور)](https://store.d7team.com/premium-bundle-30-days/p387462061)
+- **⁦$34.99⁩ ربع سنوي** — [باقة بريميوم، ربع سنوي](https://store.d7team.com/premium-bundle-90-days/p645358899)
 
 [المتجر](https://store.d7team.com/delta-panel-30-days/p157845357)
 
 ### الأسئلة الشائعة
 
 <details>
-<summary><b>أقدر أتحكم بالاعبين وهم غير متصلين؟</b></summary>
+<summary><b>هل أقدر أتحكم باللاعبين وهم غير متصلين؟</b></summary>
 
-إيه. الفلوس والوظيفة والعصابة والهوية والميتاداتا والمركبات والمخازن والحظر واللايسنس ورقم المواطن كلها تشتغل سواء الاعب متصل أو لا. الإجراءات الي تصير داخل اللعبة — الإنعاش والنقل والطرد والرسائل — تحتاج الاعب يكون متصل، ونقل الأغراض بين خانات الإنفنتري يكون وهو غير متصل.
-
-</details>
-
-<details>
-<summary><b>لوحة دلتا تشتغل على QBCore و QBox و ESX و vRP و CFW؟</b></summary>
-
-إيه. تتعرف على الفريم وورك والإنفنتري بسيرفرك لحالها، مع ox_inventory و qb-inventory و qs-inventory و ps-inventory و lj-inventory، والإنفنتري المدمج في ESX و vRP. ما فيه إعداد فريم وورك تغلط فيه. على ESX و vRP ما فيه عصابات ولا حذف واسترجاع الشخصيات، و vRP ما فيه فحص التدبيل.
+نعم. الفلوس والوظيفة والعصابة والهوية والميتاداتا والمركبات والمخازن والحظر واللايسنس ورقم المواطن تتعدل كلها سواء كان اللاعب متصل أو غير متصل. أما الإجراءات اللي تصير داخل اللعبة، مثل الإنعاش والنقل والطرد والرسائل، فتحتاج اللاعب يكون متصل، ونقل الأغراض بين خانات الإنفنتري يكون وهو غير متصل.
 
 </details>
 
 <details>
-<summary><b>دلتا تقدر تكلم لاعبيني بالعربي؟</b></summary>
+<summary><b>هل تشتغل لوحة دلتا على QBCore و QBox و ESX و vRP و CFW؟</b></summary>
 
-إيه. في FiveM Config لغة وحدة للعبة لكل السيرفر، عربي أو إنجليزي. إشعارات دلتا للاعبين ومنيو ⁦/delta⁩ يمشون عليها. والإعلان أو الرسالة الخاصة الي تكتبها توصل مثل ما كتبتها.
-
-</details>
-
-<details>
-<summary><b>الإداريين يقدرون يستخدمونها من داخل اللعبة؟</b></summary>
-
-إيه. يكتب ⁦/delta⁩ وتفتح له نفس الصفحات بنفس الصلاحيات، بدون ما يطلع من السيرفر.
+نعم. تتعرف تلقائياً على الفريم وورك والإنفنتري في سيرفرك، وأغلب ريسورسات الحقائب مدعومة لكل أنواع الفريم وورك، فما فيه أي إعداد للفريم وورك ممكن تغلط فيه. على ESX و vRP ما فيه عصابات ولا حذف الشخصيات واسترجاعها، و vRP ما فيه فحص التدبيل.
 
 </details>
 
 <details>
-<summary><b>أقدر أحدد وش يسوي كل إداري؟</b></summary>
+<summary><b>هل أقدر أحدد لغة الإشعارات للاعبين؟</b></summary>
 
-إيه. كل صفحة وكل إجراء له صلاحية خاصة. تسوي رتب منها وتعطي الإداري رتبة وحدة أو أكثر — ويكون له كل الي تسمح فيه رتبه مع بعض — وكل إجراء يسويه ينكتب بسجل اللوق.
-
-</details>
-
-<details>
-<summary><b>أقدر أسترجع شخصية انحذفت؟</b></summary>
-
-إيه، خلال 90 يوم. لما تنحذف شخصية، لوحة دلتا تحفظ نسخة كاملة منها في قاعدة بيانات سيرفرك نفسه، وتسترجعها من سجل اللوق — الفلوس والوظيفة والإنفنتري والمركبات وكل شي انحذف معها.
+نعم. من صفحة FiveM Config تختار لغة اللعبة لسيرفرك، عربي أو إنجليزي، وتظهر فيها إشعارات دلتا وتنبيهاتها للاعبين. أما الإعلانات والرسائل الخاصة اللي يكتبها الإداريين فتوصل بنفس النص اللي انكتبت فيه.
 
 </details>
 
 <details>
-<summary><b>أقدر أشوف نشاط سيرفري مع الوقت؟</b></summary>
+<summary><b>هل يقدر الإداريين يستخدمونها من داخل اللعبة؟</b></summary>
 
-إيه. لوحة المعلومات فيها رسم لعدد الاعبين وعدد الإداريين المتصلين، بالساعة لآخر يوم، وباليوم لآخر أسبوع أو شهر.
+نعم. يكتب الإداري ⁦/delta⁩ وتفتح له نفس الصفحات بنفس الصلاحيات، بدون ما يطلع من السيرفر.
+
+</details>
+
+<details>
+<summary><b>هل أقدر أحدد صلاحيات كل إداري؟</b></summary>
+
+نعم. كل صفحة وكل إجراء له صلاحية خاصة، ومنها تسوي رتب وتعطي الإداري رتبة وحدة أو أكثر، ويكون له كل اللي تسمح فيه رتبه مجتمعة، وكل إجراء يسويه ينسجل في سجل اللوق.
+
+</details>
+
+<details>
+<summary><b>هل أقدر أسترجع شخصية محذوفة؟</b></summary>
+
+نعم، خلال 90 يوم. لما تنحذف شخصية، تحفظ لوحة دلتا نسخة كاملة منها في قاعدة بيانات سيرفرك، وتسترجعها من سجل اللوق بكل اللي انحذف معها: الفلوس والوظيفة والإنفنتري والمركبات.
+
+</details>
+
+<details>
+<summary><b>هل أقدر أتابع نشاط سيرفري مع الوقت؟</b></summary>
+
+نعم. لوحة المعلومات فيها رسم لعدد اللاعبين والإداريين المتصلين، بالساعة لآخر يوم، وباليوم لآخر أسبوع أو شهر.
 
 </details>
 
 <details>
 <summary><b>كيف تشتغل الشاشات المباشرة؟</b></summary>
 
-شاشة الاعب تنبث لمتصفحك وأنت تتابعها، وتوقف أول ما تقفلها. بدون صوت، وما ينسجل ولا ينحفظ شي.
+شاشة اللاعب تنبث لمتصفحك وأنت تتابعها، وتتوقف أول ما تقفلها. بدون صوت، وما ينسجل أو ينحفظ أي شي.
 
 </details>
 
 <details>
 <summary><b>كم سيرفر يغطي الترخيص الواحد؟</b></summary>
 
-سيرفر واحد. الترخيص مربوط بآيبي سيرفر واحد، وحساب واحد يقدر يدير أكثر من سيرفر وكل واحد بترخيصه.
+سيرفر واحد. الترخيص مربوط بآيبي سيرفر واحد، وتقدر تدير أكثر من سيرفر من حساب واحد، لكل سيرفر ترخيصه.
 
 </details>
 
 <details>
-<summary><b>كم سعرها؟</b></summary>
+<summary><b>كم سعر لوحة دلتا؟</b></summary>
 
-لوحة دلتا بـ ⁦$7.99⁩ بالشهر، أو ⁦$19.99⁩ لمدة 3 أشهر وهي أوفر من الشهري. وتجي كمان مع ام دي تي المطور و بوس منيو المطور في باقة بريميوم بـ ⁦$13.99⁩ بالشهر أو ⁦$34.99⁩ لمدة 3 أشهر. تشتريها من متجرنا وتفعّل الكود في panel.d7team.com
+اشتراكها متوفر بأكثر من خيار: شهري بـ ⁦$7.99⁩، أو ربع سنوي بـ ⁦$19.99⁩، أو باقة بريميوم مع ام دي تي متطور و بوس منيو متطور تبدأ من ⁦$13.99⁩ بالشهر.
 
 </details>
 
@@ -573,8 +659,8 @@ ensure DeltaPanel
 
 ### منتجات ثانية من دلتا سفن
 
-- [ام دي تي المطور](https://github.com/d7teamdev/advanced-mdt) — سكربت MDT للشرطة في فايف ام لـ QBCore و QBox و ESX و CFW
-- [بوس منيو المطور](https://github.com/d7teamdev/advanced-bossmenu) — سكربت بوس منيو فايف ام لـ QBCore و QBox و ESX و CFW
+- [ام دي تي متطور](https://github.com/d7teamdev/advanced-mdt) — سكربت MDT للشرطة في فايف ام لـ QBCore و QBox و ESX و CFW
+- [بوس منيو متطور](https://github.com/d7teamdev/advanced-bossmenu) — سكربت بوس منيو فايف ام لـ QBCore و QBox و ESX و CFW
 - [سيارات فايف ام مضافة](https://d7team.com/ar/cars)
 
 </div>
