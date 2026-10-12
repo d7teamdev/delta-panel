@@ -11,7 +11,7 @@
 
 FiveM admin panel for QBCore, QBox, ESX, vRP & CFW: manage online and offline players, inventories, vehicles, bans and Live Screens, in browser or game.
 
-Delta Panel gives your staff one place to run the server: who is online, every character and vehicle, inventories and stashes, bans, the priority queue, and a full log of who did what. They can watch a player's screen while it happens, and act on what they see. It opens in a browser, and since 2.1 it opens in the game too — your admins type /delta and get the same pages with the same permissions, without leaving the server. Version 2.2 adds an activity chart for players and admins by day, week or month, restoring a deleted character within 90 days, several roles per admin, and support for qs, ps and lj inventories.
+Delta Panel gives your staff one place to run the server: who is online, every character and vehicle, inventories and stashes, bans, the priority queue, and a full log of who did what. They can watch a player's screen while it happens, and act on what they see. It opens in a browser, and since 2.1 it opens in the game too — your admins type /delta and get the same pages with the same permissions, without leaving the server. Version 2.2 adds an activity chart for players and admins by day, week or month, restoring a deleted character within 90 days, several roles per admin, and support for qs, ps and lj inventories. Version 2.3 runs on ESX and vRP too, speaks to your players in Arabic or English, and opens /delta fully in Arabic.
 
 > This repository is documentation only. The resource is sold on our store and downloaded from the Client Area after you redeem your code.
 
@@ -40,6 +40,7 @@ Delta Panel gives your staff one place to run the server: who is online, every c
 - Edit character metadata key by key, with the right control for each value.
 - Change License — move a character to the Rockstar licence it should load with.
 - Change a character's citizen ID across every table that references it.
+- A character's ID shows as your framework shows it: citizen ID on QB, the social security number on ESX when your server has one, user ID on vRP.
 - Delete a character, with a typed confirmation.
 - Restore a deleted character within 90 days: a full copy is kept when it is deleted, and the audit log brings it back.
 - Set a connected player's permission level: user, mod, admin or god.
@@ -102,7 +103,8 @@ Delta Panel gives your staff one place to run the server: who is online, every c
 
 - Dashboard: who is online now, the last players to join, and an activity chart of players and admins by day, week or month.
 - Online players with their characters, one click from each profile.
-- Priority and queue: grant or remove priority, move a player in the queue, or remove them.
+- Priority and queue: name each priority (like VIP Gold), grant, change or remove it, and move a player to any place in the queue or out of it.
+- Saved priorities come back on their own after a restart.
 - Gangs and their members.
 - Leaderboards your players can open in their browser, with weekly and all-time boards.
 
@@ -295,7 +297,7 @@ Support is on our Discord: [discord.gg/d-7](https://discord.gg/d-7). Issues are 
 
 لوحة تحكم سيرفر فايف ام لـ QBCore و QBox و ESX و vRP و CFW: تحكم بالاعبين المتصلين وغير المتصلين، الإنفنتري، المركبات، الحظر والشاشات المباشرة من المتصفح أو اللعبة.
 
-لوحة دلتا تجمع لطاقمك كل شي بمكان واحد: مين متصل، كل الشخصيات والمركبات، الإنفنتري والمخازن، البانات، قائمة الأولوية، وسجل كامل لمين سوّى وش. يقدرون يشوفون شاشة اللاعب لحظة بلحظة وياخذون إجراء على الي شافوه. تفتح بالمتصفح، ومن تحديث 2.1 تفتح جوّه اللعبة بعد — الإداري يكتب ⁦/delta⁩ وتجيه نفس الصفحات بنفس الصلاحيات، بدون ما يطلع من السيرفر. وتحديث 2.2 يضيف رسم نشاط للاعبين والإداريين باليوم والأسبوع والشهر، واسترجاع الشخصية المحذوفة خلال 90 يوم، وأكثر من رتبة للإداري الواحد، ودعم إنفنتري qs و ps و lj
+لوحة دلتا تجمع لطاقمك كل شي بمكان واحد: مين متصل، كل الشخصيات والمركبات، الإنفنتري والمخازن، البانات، قائمة الأولوية، وسجل كامل لمين سوّى وش. يقدرون يشوفون شاشة اللاعب لحظة بلحظة وياخذون إجراء على الي شافوه. تفتح بالمتصفح، ومن تحديث 2.1 تفتح جوّه اللعبة بعد — الإداري يكتب ⁦/delta⁩ وتجيه نفس الصفحات بنفس الصلاحيات، بدون ما يطلع من السيرفر. وتحديث 2.2 يضيف رسم نشاط للاعبين والإداريين باليوم والأسبوع والشهر، واسترجاع الشخصية المحذوفة خلال 90 يوم، وأكثر من رتبة للإداري الواحد، ودعم إنفنتري qs و ps و lj. وتحديث 2.3 يخليها تشتغل على ESX و vRP بعد، وتكلم لاعبينك بالعربي أو الإنجليزي، ومنيو ⁦/delta⁩ يصير كامل بالعربي.
 
 > هذا المستودع للتعريف والشرح فقط. الريسورس يُباع في متجرنا، وتحمّله من منطقة العميل بعد ما تفعّل الكود
 
@@ -324,6 +326,7 @@ Support is on our Discord: [discord.gg/d-7](https://discord.gg/d-7). Issues are 
 - تعديل الميتاداتا مفتاح مفتاح، مع الأداة المناسبة لكل قيمة
 - تغيير اللايسنس — تنقل الشخصية للايسنس روكستار الي المفروض تنفتح عليه
 - تغيير رقم المواطن للشخصية في كل الجداول المرتبطة فيه
+- رقم الشخصية يطلع مثل ما يعرضه فريم ووركك: على vRP الآيدي، وعلى ESX رقم الضمان الاجتماعي إذا سيرفرك يستخدمه، وعلى QB رقم المواطن
 - حذف شخصية، مع تأكيد مكتوب
 - استرجاع الشخصية المحذوفة خلال 90 يوم: تنحفظ نسخة كاملة منها وقت الحذف، وترجعها من سجل اللوق
 - تحديد صلاحية الاعب المتصل: user أو mod أو admin أو god
@@ -386,7 +389,8 @@ Support is on our Discord: [discord.gg/d-7](https://discord.gg/d-7). Issues are 
 
 - لوحة المعلومات: مين متصل الحين، آخر الي دخلوا، ورسم نشاط للاعبين والإداريين باليوم أو الأسبوع أو الشهر
 - الاعبين المتصلين مع شخصياتهم، وكل ملف على بعد ضغطة
-- الأولوية والانتظار: إعطاء أو سحب أولوية، تحريك لاعب بالطابور، أو إخراجه منه
+- الأولوية والانتظار: اسم لكل أولوية (مثل VIP Gold)، إعطاء أو تعديل أو سحب، وتحريك لاعب لأي مكان بالطابور أو إخراجه منه
+- الأولويات المحفوظة ترجع لحالها بعد الريستارت
 - العصابات وأعضاؤها
 - صفحات صدارة يفتحها لاعبينك من المتصفح، أسبوعية وعلى طول الوقت
 
