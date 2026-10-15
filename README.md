@@ -164,7 +164,7 @@ Delta Panel gives your staff one place to run the server: who is online, every c
 
 ### Video
 
-[![Delta Panel](https://img.youtube.com/vi/ESAoESPsrB8/hqdefault.jpg)](https://www.youtube.com/watch?v=ESAoESPsrB8)
+[![Delta Panel](https://img.youtube.com/vi/aCgH3nY7090/hqdefault.jpg)](https://www.youtube.com/watch?v=aCgH3nY7090)
 
 ### Requirements
 
@@ -487,7 +487,7 @@ Support is on our Discord: [discord.gg/d-7](https://discord.gg/d-7). Issues are 
 
 ### الفيديو
 
-[![Delta Panel](https://img.youtube.com/vi/ESAoESPsrB8/hqdefault.jpg)](https://www.youtube.com/watch?v=ESAoESPsrB8)
+[![Delta Panel](https://img.youtube.com/vi/aCgH3nY7090/hqdefault.jpg)](https://www.youtube.com/watch?v=aCgH3nY7090)
 
 ### المتطلبات
 
