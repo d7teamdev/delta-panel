@@ -164,7 +164,7 @@ Delta Panel gives your staff one place to run the server: who is online, every c
 
 ### Video
 
-[![Delta Panel](https://img.youtube.com/vi/aCgH3nY7090/hqdefault.jpg)](https://www.youtube.com/watch?v=aCgH3nY7090)
+[![Delta Panel](https://img.youtube.com/vi/4T-eGJddQpo/hqdefault.jpg)](https://www.youtube.com/watch?v=4T-eGJddQpo)
 
 ### Requirements
 
